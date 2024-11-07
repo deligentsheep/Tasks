@@ -1,3 +1,7 @@
 # Tasks
-### 产出对应的Markdown学习笔记并上传到Github的仓库中:[Markdown学习笔记](Markdown.md)
-### 产出对应的Github入门学习笔记并上传到Github的仓库中:[Github学习笔记](Github.md)
+### 一、关于Markdown:
+> 1.语法学习: [Markdown语法](Markdown.md)
+> 
+> 2.基本原理：[Markdown浅原理](Markdown2.md)
+### 二、关于Github
+> 2.基本知识：[Github入门知识](Github.md)

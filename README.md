@@ -13,8 +13,10 @@
 > 进阶版知识：[Github进阶知识](Github2.md)
 ### 二、关于Git
 > 1.初步学习笔记：[初始版](Git.md)
+> 
 > 2.扩展知识：[有关版本回滚和冲突解决](Git2.md)
 ## 阶段三
 ### 一、关于三种语法
 > 1.三种语法初步学习笔记：[HTML+CSS+JS](HTML+CSS+JS.md)
-> 2.思考三者关系，探索更多Markdown原理：[Markdown深原理]()
+> 
+> 2.思考三者关系，探索更多Markdown原理：[Markdown深原理](Markdown3.md)

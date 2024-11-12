@@ -21,4 +21,4 @@
 > 
 > 2.思考三者关系，探索更多Markdown原理：[Markdown深原理](Markdown3.md)
 ### 二、demo
-> 代码以及附件见文件夹：[DEMO](Gdemo.md)
+> 代码以及附件见文件夹：[DEMO](Gdemo)

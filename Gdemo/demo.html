@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>过中国节</title>
+    <link rel="icon" href="favicon.ico"/> 
+    <style>
+        body, html{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .head{
+            position: relative;
+            width:100%;
+            height:100%;
+        }
+        .text{
+            position: absolute;
+            left:89%;
+            top:0px; /* 根据需要调整位置 */
+            background-color: rgba(220,38,38,0.2);
+            z-index:1;
+        }<!--透明背景-->
+        .img{
+            position:absolute;
+            top:0%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            height:auto;
+            z-index:-1;
+        }
+        .content{
+            position:absolute;
+            top:250px;
+            left:35%;
+            font-family:楷体;
+            font-size:8rem;
+            z-index:2;
+        }
+        .container{
+            display:flex;
+            justify-content:space-between; /* 确保盒子在水平方向上等间距分布 */
+            width:100%;
+        }
+        .box{
+            position:relative;
+            display: flex;
+            flex:1; /* 每个盒子占据相同的空间 */
+            margin: 0 10px; /* 盒子之间的间距 */
+            padding:20px;
+            border: 1px color white; /* 边框 */
+            height:650px; /* 盒子的高度 */
+        }
+        .festival{
+            position:absolute;
+            left:45%;
+            font-family:楷体;
+            font-size:2rem;
+        }
+        .img4{
+            position:absolute;
+            top:10%;
+            left:5%;
+            height:auto;
+            z-index:1;
+        }
+        .tail{
+            text-align:center;
+            background-color: antiquewhite;
+            left:50%;
+            font-family:楷体;
+            font-size:2rem;
+        }
+        a.line:link{color:black;}
+        a.line:visited{color:cornflowerblue;}
+        a.line:hover{color:rgb(188, 115, 6);}
+        a.line:active{color:brown;}
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div>
+            <img src="./img3.jpg" alt="背景图" class="img"/>
+            <span class="content"><b>我们的节日</b></span>
+            <input type="text" class="text">
+        </div>
+        <div class="container">
+            <p class="box">
+                <span class="festival"><a class="line" href="https://baike.baidu.com/item/%E6%98%A5%E8%8A%82/136876" target="_blank"><b>春节</b></a></span>
+                <img src="img4.jpg" alt="春节图片" class="img4">
+            </p>
+            <p class="box">
+                <span class="festival"><a class="line" href="https://baike.baidu.com/item/%E5%85%83%E5%AE%B5%E8%8A%82/118213?fromModule=lemma_search-box" target="_blank"><b>元宵节</b></a></span>
+                <img src="img5.jpg" alt="元宵图片" class="img4">
+            </p>
+            <p class="box">
+                <span class="festival"><a class="line" href="https://baike.baidu.com/item/%E7%AB%AF%E5%8D%88%E8%8A%82/1054" target="_blank"><b>端午节</b></a></span>
+                <img src="img6.jpg" alt="端午图片" class="img4">
+            </p>
+        </div>
+        <p></p>
+        <div class="container">
+            <p class="box">
+                <span class="festival"><a class="line" href="https://baike.baidu.com/item/%E9%87%8D%E9%98%B3%E8%8A%82/128301" target="_blank"><b>重阳节</b></a></span>
+                <img src="img7.jpg" alt="重阳图片" class="img4">
+            </p>
+            <p class="box">
+                <span class="festival"><a class="line" href="https://baike.baidu.com/item/%E4%B8%AD%E7%A7%8B%E8%8A%82/128234" target="_blank"><b>中秋节</b></a></span>
+                <img src="img8.jpg" alt="中秋图片" class="img4">
+            <p class="box">
+                <span class="festival"><a class="line" href="https://baike.baidu.com/item/%E5%9B%BD%E5%BA%86%E8%8A%82?fromModule=lemma_search-box" target="_blank"><b>国庆节</b></a></span>
+                <img src="img9.jpg" alt="国庆图片" class="img4">
+            </p>
+        </div>
+        <div class="tail">
+            <p>有问题请看下方</p>
+            <p></p>
+            <a href=“tel:19965827801”>拨打电话</a>
+            <p></p>
+            <a href=“mailto:zhang20050507@qq.com”>邮件联系</a>
+        </div>
+    </div>
+</body>
+</html>

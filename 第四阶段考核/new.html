@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新思路</title>
+    <link rel="icon" href="favicon.ico"/>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+    .head{
+        position:relative;
+        width:100%;
+        height:100%;
+    }
+    .topnav{
+        position:absolute;
+        text-align:center;
+        top:0px;
+        border-radius:30px;
+        width:1500px;
+        left:50%;
+        transform:translate(-50%);
+        overflow: hidden;
+        background-color: #efa30d;
+    }
+    .topnav a{
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        width:300px;
+        height:50px;
+        padding-top:20px;
+        text-decoration:none;
+        font-size: 25px;
+    }
+    .img1{
+        position:absolute;
+        float:left;
+        padding-top:0px;
+        left:220px;
+        text-decoration: none;
+    }
+    .img2{
+        position:absolute;
+        float:left;
+        padding-top:0px;
+        left:510px;
+        text-decoration: none;
+    }
+    .img3{
+        position:absolute;
+        float:left;
+        padding-top:0px;
+        left:825px;
+        text-decoration: none;
+    }
+    .img4{
+        position:absolute;
+        float:left;
+        left:1138px;
+        transform:translate(-50%);
+        text-decoration: none;
+    }
+    .img5{
+        position:absolute;
+        float:left;
+        left: 1400px;;
+        transform:translate(-50%);
+        text-decoration: none;
+    }
+    .topnav a:hover{
+        border-radius:30px;
+        background-color:#de582cc8 ;
+        color: #ddd;
+    }
+    .s1{
+        position:absolute;
+        text-align:center;
+        left:50%;
+        transform:translate(-50%);
+        width:1500px;
+        height:1000px;
+        top:75px;
+    }
+    .s1-img2{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        width:400px;
+        height:auto;
+        top:140px;
+        left:750px;
+    }
+    .s1img2{
+        cursor:pointer;
+        transition:all 0.5s;
+        width:100%;
+        height:100%;
+    }
+    .s1img2:hover{
+        transform:scale(1.3);
+    }   
+    .s2{
+        position:absolute;
+        text-align:center;
+        left:50%;
+        transform:translate(-50%);
+        width:1500px;
+        top:1100px;
+    }
+    .s2-txt{
+        position:absolute;
+        top:70px;
+        left:500px;
+        color:rgb(54, 54, 227);
+        font-size: 90px;
+    }
+    .s2-img11{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        left:970px;
+        top:100px;
+        width:60px;
+        height:60px;
+    }
+    .s3{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:1400px;
+        width:1300px;
+        height:580px;
+        border:10px solid grey;
+        border-radius:50px;
+    }
+    .s3-txt1{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:250px;
+        width:500px;
+        height:100px;
+    }
+    .txt1{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:65px;
+    }
+    .s3-txt2{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:150px;
+        left:350px;
+        width:700px;
+        height:100px;
+    }
+    .txt2{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:40px;
+        color:rgb(17, 199, 209)
+    }
+    .s3-txt3{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:280px;
+        left:350px;
+        width:700px;
+        height:300px;
+    }
+    .txt3-1{
+        position:absolute;
+        top:5px;
+        left:30px;
+        font-size:25px;
+    }
+    .txt3-2{
+        position:absolute;
+        top:130px;
+        left:30px;
+        font-size:25px;
+    }
+    .s3-img{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:1000px;
+        width:400px;
+        height:500px;
+    }
+    .s4{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:2030px;
+        width:1300px;
+        height:580px;
+        border:10px solid grey;
+        border-radius:50px;
+    }
+    .s4-txt1{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:650px;
+        width:500px;
+        height:100px;
+    }
+    .txt11{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:65px;
+    }
+    .s4-txt2{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:150px;
+        left:750px;
+        width:700px;
+        height:100px;
+    }
+    .txt22{
+        position:absolute;
+        top:5px;
+        left:80px;
+        font-size:40px;
+        color:rgb(226, 107, 226)
+    }
+    .s4-txt3{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:280px;
+        left:800px;
+        width:700px;
+        height:300px;
+    }
+    .txt33{
+        position:absolute;
+        top:5px;
+        left:30px;
+        font-size:25px;
+    }
+    .s4-img{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:230px;
+        width:400px;
+        height:500px;
+    }
+    .s5{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:2660px;
+        width:1300px;
+        height:580px;
+        border:10px solid grey;
+        border-radius:50px;
+    }
+    .s5-txt1{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:220px;
+        width:500px;
+        height:100px;
+    }
+    .txt111{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:65px;
+    }
+    .s5-txt2{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:150px;
+        left:350px;
+        width:800px;
+        height:100px;
+    }
+    .txt222{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:40px;
+        color:rgb(17, 199, 209)
+    }
+    .s5-txt3{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:300px;
+        left:350px;
+        width:700px;
+        height:300px;
+    }
+    .txt333{
+        position:absolute;
+        top:5px;
+        left:30px;
+        font-size:25px;
+    }
+    .s5-img{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:1000px;
+        width:400px;
+        height:500px;
+    }
+    .s6{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:3290px;
+        width:1300px;
+        height:580px;
+        border:10px solid grey;
+        border-radius:50px;
+    }
+    .s6-txt1{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:650px;
+        width:500px;
+        height:100px;
+    }
+    .txt1111{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:65px;
+    }
+    .s6-txt2{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:150px;
+        left:750px;
+        width:720px;
+        height:100px;
+    }
+    .txt2222{
+        position:absolute;
+        top:5px;
+        left:80px;
+        font-size:40px;
+        color:#e2bc6b
+    }
+    .s6-txt3{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:280px;
+        left:800px;
+        width:700px;
+        height:300px;
+    }
+    .txt3333{
+        position:absolute;
+        top:5px;
+        left:30px;
+        font-size:25px;
+    }
+    .s6-img{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:230px;
+        width:400px;
+        height:500px;
+    }
+    .s7{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:4000px;
+        width:1400px;
+        height:800px;
+        border:10px solid grey;
+        border-radius:20px;
+    }
+    .s7-img1{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:730px;
+        left:60px;
+        width:250px;;
+        height:100px;
+    }
+    .s7-img2{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:-30px;
+        left:60px;
+        width:250px;
+        height:100px;
+    }
+    .s7-img3{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:730px;
+        left:1350px;
+        width:250px;
+        height:100px;
+    }
+    .s7-img4{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:-30px;
+        left:1350px;
+        width:250px;
+        height:100px;
+    }
+    .s7-txt1{
+        position:absolute;
+        left:50%;
+        transform:translate(50%);
+        top:40px;
+        left:200px;
+        width:500px;
+        height:100px;
+    }
+    .s7txt1{
+        font-size:100px;
+        color:grey;
+    }
+    .s7-img5{
+        position:absolute;
+        left:50%;
+        transform:translate(50%);
+        top:40px;
+        left:850px;
+        width:100px;
+        height:100px;
+    }
+    .s7-1{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        border:10px solid purple;
+        border-radius:30px;
+        top:200px;
+        left:350px;
+        width:220px;
+        height:400px;
+    }
+    .s7-img6{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:100px;
+        width:120px;
+        height:150px;
+    }
+    .s7-txt2{
+        position:absolute;
+        left:50%;
+        transform: translate(-50%);
+        top:240px;
+        left:110px;
+        width:150px;
+        height:auto;
+    }
+    .s7-2{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        border:10px solid purple;
+        border-radius:30px;
+        top:200px;
+        left:700px;
+        width:220px;
+        height:450px;
+    }
+    .s7-img7{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:110px;
+        width:120px;
+        height:150px;
+    }
+    .s7-txt3{
+        position:absolute;
+        left:50%;
+        transform: translate(-50%);
+        top:240px;
+        left:110px;
+        width:150px;
+        height:auto;
+    }
+    .s7-3{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        border:10px solid purple;
+        border-radius:30px;
+        top:200px;
+        left:1050px;
+        width:220px;
+        height:400px;
+    }
+    .s7-img8{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:100px;
+        width:120px;
+        height:150px;
+    }
+    .s7-txt4{
+        position:absolute;
+        left:50%;
+        transform: translate(-50%);
+        top:240px;
+        left:110px;
+        width:150px;
+        height:auto;
+    }
+    .s7-img9{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        left:1260px;
+        top:500px;        
+        width:250px;
+        height:250px;
+    }
+    .img{
+        width:100%;
+        height:100%;
+    }
+</style>
+</head>
+<body>
+    <div class="head">
+        <div class="topnav">
+            <a href="#hh">
+                <b>Introuction</b>
+                <img src="./箭头.png" class="img1">
+            </a>
+            <a href="#s7">
+                <b>About US</b>
+                <img src="./关于我们.png" class="img2">
+            </a>
+            <a href="https://campus.new-thread.com/" target="blank">
+                <b style>New Thread</b>
+                <img src="./首页.png" class="img3">
+            </a>
+            <a href="#contact">
+                <b>Contact US</b>
+                <img src="./电话.png" class="img4">
+            </a>
+            <a href="#about">
+                <b>Q&A</b>
+                <img src="./聊天.png" class="img5">
+            </a>
+        </div>
+        <div class="s1">
+            <div class="s1-img1">
+                <img src="./background_Homepage.png" class="img">
+            </div>
+            <div class="s1-img2">
+                <img src="./decoration_Geek.png" class="s1img2">
+            </div>
+        </div>
+        <div class="s2">
+            <img src="./decoration_Transition.png" class="img">
+            <span class="s2-txt">Introdction</span>
+            <div class="s2-img11">
+                <img src="./箭头.png" class="img">
+            </div>
+        </div>
+        <div class="s3">
+            <div class="s3-txt1">
+                <span class="txt1"><b>开发程序猿</b></span>
+            </div>
+            <p></p>
+            <div class="s3-txt2">
+                <span class="txt2"><b>“Stay Hungry，Stay Foolish”</b></span>
+            </div>
+            <div class="s3-txt3">
+                <span class="txt3-1"><b>前端：前端开发是创建Web或app视觉界面呈现给用户的过程通过HTML，CSS及JavaScript以及衍生出来的各种技术、框架、解决方案，实现互联网产品的用户界面交互。</b></span>
+                <span class="txt3-2"><b>后端：通常也称服务器端开发。不对用户显示,负责处理前端的请求，进行逻辑处理和数据交互。 客户端: 移动应用开发是为了小型、无线计算设备编写软件的流程和程序的集合，例如智能手机或平板电脑。</b></span></span>
+            </div>
+            <div class="s3-img">
+                <img src="./Geek_Programmer.png" class="img">
+            </div>
+        </div>
+        <div class="s4">
+            <div class="s4-txt1">
+                <span class="txt11"><b>产品经理</b></span>
+            </div>
+            <p></p>
+            <div class="s4-txt2">
+                <span class="txt22"><b>"好的软件的特征是,明明没用过，但总觉得用过似的。"</b></span>
+            </div>
+            <div class="s4-txt3">
+                <span class="txt33"><b>PM是针对某一项或是某一类的产品进行规划和管理的人员。 PM需要拥有缜密的产品逻辑思维，研究用户心理，负责产品的整个生命周期。 PM参与产品的UI和交互设计，为设计和开发确定产品原型，能够将产品变得有个性,操作变得舒适简单、自由。 PM需要一定的文档能力和沟通能力，能够在团队合作的过程中跟各个角色进行有效沟通。</b></span>
+            </div>
+            <div class="s4-img">
+                <img src="./Geek_PM.png" class="img">
+            </div>
+        </div>
+        <div class="s5">
+            <div class="s5-txt1">
+                <span class="txt111"><b>游戏开发</b></span>
+            </div>
+            <p></p>
+            <div class="s5-txt2">
+                <span class="txt222"><b>"TECH OTAKUS SAVE THE WORLD"</b></span>
+            </div>
+            <div class="s5-txt3">
+                <span class="txt333"><b>对游戏开发的热爱和追求，使我们相聚于此。 涉及计算机图形学的学习，我们使用物理模拟引擎Unity开发我们所追求的世界，一个故事，一个角色，在我们的世界里改变现实，创造新的可能，我们参与，我们改变，我们创造...</b></span>
+            </div>
+            <div class="s5-img">
+                <img src="./Geek_Game.png" class="img">
+            </div>
+        </div>
+        <div class="s6">
+            <div class="s6-txt1">
+                <span class="txt1111"><b>安全</b></span>
+            </div>
+            <p></p>
+            <div class="s6-txt2">
+                <span class="txt2222"><b>"路漫漫其修远兮，非大毅力者不能"</b></span>
+            </div>
+            <div class="s6-txt3">
+                <span class="txt3333"><b>我们主要学习Web安全和二进制安全。在Web安全中我们将学习和实践Web漏洞挖掘技术，也将探索和讨论Web安全实践的方法。在二进制安全中我们专注于分析和防御与计算机程序、系统相关的威胁，同时实践漏洞分析和修补。耐心和钻研缺一不可。</b></span>
+            </div>
+            <div class="s6-img">
+                <img src="./Geek_security.png" class="img">
+            </div>
+        </div>
+        <div class="s7">
+            <div class="s7-img1">
+                <img src="./decoration_Decoration(1).png" class="img">
+            </div>
+            <div class="s7-img2">
+                <img src="./decoration_Decoration(2).png" class="img">
+            </div>
+            <div class="s7-img3">
+                <img src="./decoration_Decoration(3).png" class="img">
+            </div>
+            <div class="s7-img4">
+                <img src="./decoration_Decoration.png" class="img">
+            </div>
+            <div class="s7-txt1">
+                <span class="s7txt1">About US</span>
+            </div>
+            <div class="s7-img5">
+                <img src="./关于我们.png" class="img">
+            </div>
+            <div class="s7-1">
+                <div class="s7-img6">
+                    <img src="./about_Speech.png" class="img">
+                </div>
+                <div class="s7-txt2">
+                    <span><b>每周我们会举行一次技术例会，用来汇报我们的学习内容，供成员之间交流学习。</b></span>
+                </div>
+            </div>
+            <div class="s7-2">
+                <div class="s7-img7">
+                    <img src="./about_Diversity.png" class="img">
+                </div>
+                <div class="s7-txt3">
+                    <span><b>多元化是我们的特色。在这里，你可以拥有多种方向选择，前后端、安全、AI、产品/设计、游戏等。</b></span>
+                </div>
+            </div>
+            <div class="s7-3">
+                <div class="s7-img8">
+                    <img src="./about_Time.png" class="img">
+                </div>
+                <div class="s7-txt4">
+                    <span><b>耐心、毅力是我们必备的品质，每周我们会至少花30小时在实验室中。以保证技术的精进。</b></span>
+                </div>
+            </div>
+            <div class="s7-img9">
+                <img src="./decoration_Butterfly.png" class="img">
+            </div>
+        </div>
+        
+</body>
+</html>

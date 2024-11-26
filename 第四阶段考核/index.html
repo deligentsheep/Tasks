@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.2, maxmum-scale=0.2, minimum-scale=0.2">
+    <title>新思路</title>
+    <link rel="icon" href="favicon.ico"/>
+<style>
+    html{
+        scroll-behavior:smooth;
+    }
+    body{
+        margin:0;
+        font-family: Arial;
+    }
+    .head{
+        position:relative;
+        width:100%;
+        height:100%;
+    }
+    .content{
+        padding-top:70px;
+    }
+    .navbar{
+        position:fixed;
+        text-align:center;
+        top:0px;
+        border-radius:30px;
+        width:1500px;
+        left:50%;
+        transform:translate(-50%);
+        overflow: hidden;
+        background-color: #efa30d;
+        transition: background-color 0.3s ease;
+        z-index:1;      
+    }
+    .navbar a{
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        width:300px;
+        height:50px;
+        padding-top:20px;
+        text-decoration:none;
+        font-size: 25px;
+    }
+    .img1{
+        position:absolute;
+        float:left;
+        padding-top:0px;
+        left:220px;
+        text-decoration: none;
+    }
+    .img2{
+        position:absolute;
+        float:left;
+        padding-top:0px;
+        left:510px;
+        text-decoration: none;
+    }
+    .img3{
+        position:absolute;
+        float:left;
+        padding-top:0px;
+        left:825px;
+        text-decoration: none;
+    }
+    .img4{
+        position:absolute;
+        float:left;
+        left:1138px;
+        transform:translate(-50%);
+        text-decoration: none;
+    }
+    .img5{
+        position:absolute;
+        float:left;
+        left: 1400px;;
+        transform:translate(-50%);
+        text-decoration: none;
+    }
+    .navbar a:hover{
+        border-radius:30px;
+        background-color:#de582cc8 ;
+        color: #ddd;
+    }
+    .s1{
+        position:absolute;
+        text-align:center;
+        left:50%;
+        transform:translate(-50%);
+        width:1500px;
+        height:1000px;
+        top:75px;
+    }
+    .s1-img2{
+        position:absolute;
+        width:400px;
+        height:auto;
+        top:140px;
+        left:550px;
+    }
+    .s1img2{
+        cursor:pointer;
+        transition:all 0.5s;
+        width:100%;
+        height:100%;
+    }
+    .s1img2:hover{
+        transform:scale(1.3);
+    }   
+    .s2{
+        position:absolute;
+        text-align:center;
+        left:50%;
+        transform:translate(-50%);
+        width:1500px;
+        top:1100px;
+    }
+    .s2-txt{
+        position:absolute;
+        top:70px;
+        left:500px;
+        color:rgb(54, 54, 227);
+        font-size: 90px;
+    }
+    .s2-img11{
+        position:absolute;
+        left:970px;
+        top:100px;
+        width:60px;
+        height:60px;
+    }
+    .s3out{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:1400px;
+        width:1300px;
+        height:580px;       
+    }
+    .s3{
+        position:absolute;
+        top:0px;
+        width:1300px;
+        height:580px;
+        left:0px;
+        box-shadow: 0 0px 10px 0 grey; 
+        border:10px solid grey;
+        border-radius:50px;
+        cursor:pointer;
+        transition:all 0.3s;
+    }
+    .s3:hover{
+        transform:scale(1.05,1.05);
+    }
+    .s3-txt1{
+        position:absolute;
+        top:20px;
+        left:0px;
+        width:500px;
+        height:100px;
+    }
+    .txt1{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:65px;
+    }
+    .s3-txt2{
+        position:absolute;
+        top:150px;
+        left:0px;
+        width:700px;
+        height:100px;
+    }
+    .txt2{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:40px;
+        color:rgb(17, 199, 209)
+    }
+    .s3-txt3{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:280px;
+        left:350px;
+        width:700px;
+        height:300px;
+    }
+    .txt3-1{
+        position:absolute;
+        top:5px;
+        left:30px;
+        font-size:25px;
+    }
+    .txt3-2{
+        position:absolute;
+        top:130px;
+        left:30px;
+        font-size:25px;
+    }
+    .s3-img{
+        position:absolute;
+        top:20px;
+        left:800px;
+        width:400px;
+        height:500px;
+    }
+    .s3img{
+        width:100%;
+        height:100%;
+        transition:all 0.5s;
+    }
+    .s3img:hover{
+        transform:scale(1.05) rotate(-20deg);
+    }
+    .s4{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:2030px;
+        width:1300px;
+        height:580px;
+        border:10px solid grey;
+        box-shadow: 0 0px 10px 0 grey;
+        border-radius:50px;
+    }
+    .s4-txt1{
+        position:absolute;
+        top:20px;
+        left:400px;
+        width:500px;
+        height:100px;
+    }
+    .txt11{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:65px;
+    }
+    .s4-txt2{
+        position:absolute;
+        top:150px;
+        left:400px;
+        width:700px;
+        height:100px;
+    }
+    .txt22{
+        position:absolute;
+        top:5px;
+        left:80px;
+        font-size:40px;
+        color:rgb(226, 107, 226)
+    }
+    .s4-txt3{
+        position:absolute;
+        top:280px;
+        left:450px;
+        width:700px;
+        height:300px;
+    }
+    .txt33{
+        position:absolute;
+        top:5px;
+        left:30px;
+        font-size:25px;
+    }
+    .s4-img{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:20px;
+        left:230px;
+        width:400px;
+        height:500px;
+    }
+    .s5{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:2660px;
+        width:1300px;
+        height:580px;
+        border:10px solid grey;
+        box-shadow: 0 0px 10px 0 grey;
+        border-radius:50px;
+    }
+    .s5-txt1{
+        position:absolute;
+        top:20px;
+        left:0px;
+        width:500px;
+        height:100px;
+    }
+    .txt111{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:65px;
+    }
+    .s5-txt2{
+        position:absolute;
+        top:150px;
+        left:-20px;
+        width:800px;
+        height:100px;
+    }
+    .txt222{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:40px;
+        color:rgb(17, 199, 209)
+    }
+    .s5-txt3{
+        position:absolute;
+        top:300px;
+        left:0px;
+        width:700px;
+        height:300px;
+    }
+    .txt333{
+        position:absolute;
+        top:5px;
+        left:30px;
+        font-size:25px;
+    }
+    .s5-img{
+        position:absolute;
+        top:20px;
+        left:800px;
+        width:400px;
+        height:500px;
+    }
+    .s6{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:3290px;
+        width:1300px;
+        height:580px;
+        border:10px solid grey;
+        box-shadow: 0 0px 10px 0 grey;
+        border-radius:50px;
+    }
+    .s6-txt1{
+        position:absolute;
+        top:20px;
+        left:400px;
+        width:500px;
+        height:100px;
+    }
+    .txt1111{
+        position:absolute;
+        top:5px;
+        left:100px;
+        font-size:65px;
+    }
+    .s6-txt2{
+        position:absolute;
+        top:150px;
+        left:400px;
+        width:720px;
+        height:100px;
+    }
+    .txt2222{
+        position:absolute;
+        top:5px;
+        left:80px;
+        font-size:40px;
+        color:#e2bc6b
+    }
+    .s6-txt3{
+        position:absolute;
+        top:280px;
+        left:450px;
+        width:700px;
+        height:300px;
+    }
+    .txt3333{
+        position:absolute;
+        top:5px;
+        left:30px;
+        font-size:25px;
+    }
+    .s6-img{
+        position:absolute;
+        top:20px;
+        left:30px;
+        width:400px;
+        height:500px;
+    }
+    .s7{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:4000px;
+        width:1400px;
+        height:800px;
+        border:10px solid grey;
+        background-color:rgb(249, 249, 246);
+        border-radius:20px;
+    }
+    .s7-img1{
+        position:absolute;
+        top:730px;
+        left:-50px;
+        width:250px;;
+        height:100px;
+    }
+    .s7-img2{
+        position:absolute;
+        top:-30px;
+        left:-50px;
+        width:250px;
+        height:100px;
+    }
+    .s7-img3{
+        position:absolute;
+        top:730px;
+        left:1250px;
+        width:250px;
+        height:100px;
+    }
+    .s7-img4{
+        position:absolute;
+        top:-30px;
+        left:1250px;
+        width:250px;
+        height:100px;
+    }
+    .s7-txt1{
+        position:absolute;
+        top:40px;
+        left:450px;
+        width:500px;
+        height:100px;
+    }
+    .s7txt1{
+        font-size:100px;
+        color:grey;
+    }
+    .s7-img5{
+        position:absolute;
+        top:40px;
+        left:900px;
+        width:100px;
+        height:100px;
+    }
+    .s7-1{
+        position:absolute;
+        border:10px solid purple;
+        border-radius:30px;
+        top:200px;
+        left:200px;
+        width:220px;
+        height:400px;
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .s7-1:hover{
+        transform:scale(1.2);
+    }
+    .s7-img6{
+        position:absolute;
+        top:20px;
+        left:50px;
+        width:120px;
+        height:150px;
+    }
+    .s7-txt2{
+        position:absolute;
+        top:240px;
+        left:35px;
+        width:150px;
+        height:auto;
+    }
+    .s7-2{
+        position:absolute;
+        border:10px solid purple;
+        border-radius:30px;
+        top:200px;
+        left:570px;
+        width:220px;
+        height:450px;
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .s7-2:hover{
+        transform:scale(1.2);
+    }
+    .s7-img7{
+        position:absolute;
+        top:20px;
+        left:50px;
+        width:120px;
+        height:150px;
+    }
+    .s7-txt3{
+        position:absolute;
+        top:240px;
+        left:35px;
+        width:150px;
+        height:auto;
+    }
+    .s7-3{
+        position:absolute;
+        border:10px solid purple;
+        border-radius:30px;
+        top:200px;
+        left:940px;
+        width:220px;
+        height:400px;
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .s7-3:hover{
+        transform:scale(1.2);
+    }
+    .s7-img8{
+        position:absolute;
+        top:20px;
+        left:50px;
+        width:120px;
+        height:150px;
+    }
+    .s7-txt4{
+        position:absolute;
+        top:240px;
+        left:35px;
+        width:150px;
+        height:auto;
+    }
+    .s7-img9{
+        position:absolute;
+        left:1150px;
+        top:500px;        
+        width:250px;
+        height:250px;
+    }
+    .s7img9{
+        width:100%;
+        height:100%;
+        transition:all 0.5s;
+    }
+    .s7img9:hover{
+        transform:translate(0,25px);
+    }
+    .s8{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%);
+        top:5000px;
+        width:1400px;
+        height:800px;
+        border:10px solid rgb(40, 158, 111);
+        border-radius:20px;
+    }
+    .s8-img1{
+        position:absolute;
+        top:0px;
+        left:1200px;
+        width:250px;
+        height:850px;
+    }
+    .s8-img2{
+        position:absolute;
+        top:-50px;
+        width:250px;
+        height:450px;
+    }
+    .s8-img3{
+        position:absolute;
+        top:470px;
+        left:500px;
+        width:750px;
+        height:400px;
+    }
+    .s8-img4{
+        position:absolute;
+        top:750px;
+        left:-30px;
+        width:100px;
+        height:100px;
+    }
+    .s8-img5{
+        position:absolute;
+        top:30px;
+        left:380px;
+        width:100px;
+        height:10opx;
+    }
+    .s8-img6{
+        position:absolute;
+        top:40px;
+        left:920px;
+        width:80px;
+        height:80px;
+    }
+    .s8-txt1{
+        position:absolute;
+        top:30px;
+        left:500px;
+        width:500px;
+        height:100px;
+    }
+    .s8txt1{
+        position:absolute;
+        font-size:80px;
+        color:rgb(9, 135, 93);
+    }
+    .s8-txt2{
+        position:absolute;
+        left:270px;
+        top:200px;
+        width:900px;
+        height:200px;
+    }
+    .s8txt2{
+        font-size:35px;;
+    }
+    .s8-txt3{
+        position:absolute;
+        left:270px;
+        top:400px;
+        width:800px;
+        height:400px;
+    }
+    .s8txt3{
+        color:grey;
+        font-size:27px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .s8-txt4{
+        position:absolute;
+        left:350px;
+        top:660px;
+        width:240px;
+        height:50px;
+        border-radius:20px;
+        box-shadow: 0 0px 10px 0 grey; 
+        background-color: #1c9736;
+        transition:all 0.5s;
+    }
+    .s8-txt4:hover{
+        transform:scale(1.1);
+    }
+    .s8txt4{
+        position:absolute;
+        color:white;
+        left:40px;
+        top:10px;
+        font-size:27px;
+    }
+    .s8-img7{
+        position:absolute;
+        left:170px;
+        top:10px;
+        width:30px;
+        height:30px;
+    }
+    .s8-txt5{
+        position:absolute;
+        left:630px;
+        top:660px;
+        width:160px;
+        height:50px;
+        border-radius:20px;
+        box-shadow: 0 0px 10px 0 grey; 
+        background-color: #1c9736;
+        transition:all 0.5s;
+    }
+    .s8-txt5:hover{
+        transform:scale(1.1);
+    }
+    .s8txt5{
+        position:absolute;
+        color:white;
+        left:20px;
+        top:10px;
+        font-size:27px;
+    }
+    .s8-img8{
+        position:absolute;
+        left:105px;
+        top:10px;
+        width:30px;
+        height:25px;
+    }
+    .s8-txt6{
+        position:absolute;
+        left:830px;
+        top:660px;
+        width:150px;
+        height:50px;
+        border-radius:20px;
+        box-shadow: 0 0px 10px 0 grey; 
+        background-color: #1c9736;
+        transition:all 0.5s;
+    }
+    .s8-txt6:hover{
+        transform:scale(1.1);
+    }
+    .s8txt6{
+        position:absolute;
+        color:white;
+        left:20px;
+        top:10px;
+        font-size:27px;
+    }
+    .s8-img9{
+        position:absolute;
+        left:105px;
+        top:10px;
+        width:30px;
+        height:30px;
+    }
+    .s9{
+        position:absolute;
+        display:flex;
+        left:50%;
+        transform:translate(-50%);
+        top:6000px;
+        border:10px solid rgb(70, 70, 181);
+        border-radius:40px;
+        width:1500px;
+        height:1000px;
+        overflow:hidden;
+    }
+    .s9-img1{
+        position:absolute;
+        left:0px;
+        top:80px;
+        width:1500px;
+        height:1000px;
+    }
+    .s9-txt1{
+        position:absolute;
+        top:50px;
+        left:420px;
+    }
+    .s9txt1{
+        font-size:80px;
+    }
+    .s9-img2{
+        position:absolute;
+        left:1000px;
+        top:60px;
+        width:100px;
+        height:80px;
+        z-index:1;
+    }
+    .QA{
+        position:absolute;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        overflow: hidden;
+        left:400px;
+        top:200px;
+    }
+    .Q{
+        display:flex;
+        width:1000px;
+        height:50px;
+        margin:10px;
+        overflow:hidden;
+        cursor:pointer;
+    }
+    .Q1{ 
+        left:50px;
+        font-size:30px;
+        cursor:pointer;
+    }
+    .question1{
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .question1:hover{
+        color: #ddd;
+        font-size:35px;
+    }
+    .answer1{
+        position:absolute;
+        display:none;
+        top:50px;
+        left:20px;
+        width:550px;
+    }
+    .answertxt1{
+        position:absolute;
+        top:6px;
+        left:7px;
+        font-size:25px;
+        border-radius:10px;
+        background-color: rgb(108, 147, 165);
+        color:white;
+    }
+    .Q.expanded .answer1{
+        display:block;
+    }
+    .Q2{
+        position:relative;
+        top:0px;
+        left:0px;
+        font-size:30px;
+        cursor:pointer;
+    }
+    .question2{
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .question2:hover{
+        color: #ddd;
+        font-size:35px;
+    }
+    .answer2{
+        position:absolute;
+        display:none;
+        top:50px;
+        left:20px;
+        width:550px;
+    }
+    .answertxt2{
+        position:absolute;
+        font-size:25px;
+        border-radius:10px;
+        background-color: rgb(108, 147, 165);
+        color:white;
+    }
+    .Q.expanded .answer2{
+        display:block;
+    }
+    .Q3{
+        position:relative;
+        top:0px;
+        left:0px;
+        font-size:30px;
+        cursor:pointer;
+    }
+    .question3{
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .question3:hover{
+        color: #ddd;
+        font-size:35px;
+    }
+    .answer3{
+        position:absolute;
+        display:none;
+        top:50px;
+        left:20px;
+        width:880px;
+    }
+    .answertxt3{
+        position:absolute;
+        font-size:25px;
+        border-radius:10px;
+        background-color: rgb(108, 147, 165);
+        color:white;
+    }
+    .Q.expanded .answer3{
+        display:block;
+    }
+    .Q4{
+        position:relative;
+        top:0px;
+        left:0px;
+        font-size:30px;
+        cursor:pointer;
+    }
+    .question4{
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .question4:hover{
+        color: #ddd;
+        font-size:35px;
+    }
+    .answer4{
+        position:absolute;
+        display:none;
+        top:50px;
+        left:20px;
+        width:650px;
+    }
+    .answertxt4{
+        position:absolute;
+        font-size:25px;
+        border-radius:10px;
+        background-color: rgb(108, 147, 165);
+        color:white;
+    }
+    .Q.expanded .answer4{
+        display:block;
+    }
+    .Q5{
+        position:relative;
+        top:0px;
+        left:0px;
+        font-size:30px;
+        cursor:pointer;
+    }
+    .question5{
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .question5:hover{
+        color: #ddd;
+        font-size:35px;
+    }
+    .answer5{
+        position:absolute;
+        display:none;
+        top:50px;
+        left:20px;
+        width:880px;
+    }
+    .answertxt5{
+        position:absolute;
+        font-size:25px;
+        border-radius:10px;
+        background-color: rgb(108, 147, 165);
+        color:white;
+    }
+    .Q.expanded .answer5{
+        display:block;
+    }
+    .Q6{
+        position:relative;
+        top:0px;
+        left:0px;
+        font-size:30px;
+        cursor:pointer;
+    }
+    .question6{
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .question6:hover{
+        color: #ddd;
+        font-size:35px;
+    }
+    .answer6{
+        position:absolute;
+        display:none;
+        top:50px;
+        left:20px;
+        width:950px;
+    }
+    .answertxt6{
+        position:absolute;
+        font-size:25px;
+        border-radius:10px;
+        background-color: rgb(108, 147, 165);
+        color:white;
+    }
+    .Q.expanded .answer6{
+        display:block;
+    }
+    .Q7{
+        position:relative;
+        top:0px;
+        left:0px;
+        font-size:30px;
+        cursor:pointer;
+    }
+    .question7{
+        cursor:pointer;
+        transition:all 0.5s;
+    }
+    .question7:hover{
+        color: #ddd;
+        font-size:35px;
+    }
+    .answer7{
+        position:absolute;
+        display:none;
+        top:50px;
+        left:20px;
+        width:700px;
+    }
+    .answertxt7{
+        position:absolute;
+        font-size:25px;
+        border-radius:10px;
+        background-color: rgb(108, 147, 165);
+        color:white;
+    }
+    .Q.expanded .answer7{
+        display:block;
+    }
+    .img{
+        width:100%;
+        height:100%;
+    }
+    .s10{
+        position:absolute;
+        top:7200px;
+        border-color: #252525;
+        background-color: #f4f4f4;
+        width:100%;
+        height:100px;
+    }
+    .s10-txt{
+        position:absolute;
+        top:40px;
+        left:50%;
+        transform:translate(-50%);
+        font-size:20px;
+    }
+</style>
+</head>
+<body>
+    <div class="head">
+        <div class="navbar" id="navbar">
+            <a href="#Introdction">
+                <b>Introuction</b>
+                <img src="./箭头.png" class="img1">
+            </a>
+            <a href="#aboutus">
+                <b>About US</b>
+                <img src="./关于我们.png" class="img2">
+            </a>
+            <a href="https://campus.new-thread.com/" target="blank">
+                <b style>New Thread</b>
+                <img src="./首页.png" class="img3">
+            </a>
+            <a href="#contact">
+                <b>Contact US</b>
+                <img src="./电话.png" class="img4">
+            </a>
+            <a href="#QA">
+                <b>Q&A</b>
+                <img src="./聊天.png" class="img5">
+            </a>
+        </div>
+        <div class="content">
+            <div class="s1">
+                <div class="s1-img1">
+                    <img src="./background_Homepage.png" class="img">
+                </div>
+                <div class="s1-img2">
+                    <img src="./decoration_Geek.png" class="s1img2">
+                </div>
+            </div>
+            <div class="s2" id="Introdction">
+                <img src="./decoration_Transition.png" class="img">
+                <span class="s2-txt">Introdction</span>
+                <div class="s2-img11">
+                    <img src="./箭头.png" class="img">
+                </div>
+            </div>
+            <div class="s3out">
+                <div class="s3">
+                    <div class="s3-txt1">
+                        <span class="txt1"><b>开发程序猿</b></span>
+                    </div>
+                    <p></p>
+                    <div class="s3-txt2">
+                        <span class="txt2"><b>“Stay Hungry，Stay Foolish”</b></span>
+                    </div>
+                    <div class="s3-txt3">
+                        <span class="txt3-1"><b>前端：前端开发是创建Web或app视觉界面呈现给用户的过程通过HTML，CSS及JavaScript以及衍生出来的各种技术、框架、解决方案，实现互联网产品的用户界面交互。</b></span>
+                        <span class="txt3-2"><b>后端：通常也称服务器端开发。不对用户显示,负责处理前端的请求，进行逻辑处理和数据交互。 客户端: 移动应用开发是为了小型、无线计算设备编写软件的流程和程序的集合，例如智能手机或平板电脑。</b></span></span>
+                    </div>
+                    <div class="s3-img">
+                        <img src="./Geek_Programmer.png" class="s3img">
+                    </div>
+                </div>
+            </div>
+            <div class="s4">
+                <div class="s4-txt1">
+                    <span class="txt11"><b>产品经理</b></span>
+                </div>
+                <p></p>
+                <div class="s4-txt2">
+                    <span class="txt22"><b>"好的软件的特征是,明明没用过，但总觉得用过似的。"</b></span>
+                </div>
+                <div class="s4-txt3">
+                    <span class="txt33"><b>PM是针对某一项或是某一类的产品进行规划和管理的人员。 PM需要拥有缜密的产品逻辑思维，研究用户心理，负责产品的整个生命周期。 PM参与产品的UI和交互设计，为设计和开发确定产品原型，能够将产品变得有个性,操作变得舒适简单、自由。 PM需要一定的文档能力和沟通能力，能够在团队合作的过程中跟各个角色进行有效沟通。</b></span>
+                </div>
+                <div class="s4-img">
+                    <img src="./Geek_PM.png" class="img">
+                </div>
+            </div>
+            <div class="s5">
+                <div class="s5-txt1">
+                    <span class="txt111"><b>游戏开发</b></span>
+                </div>
+                <p></p>
+                <div class="s5-txt2">
+                    <span class="txt222"><b>"TECH OTAKUS SAVE THE WORLD"</b></span>
+                </div>
+                <div class="s5-txt3">
+                    <span class="txt333"><b>对游戏开发的热爱和追求，使我们相聚于此。 涉及计算机图形学的学习，我们使用物理模拟引擎Unity开发我们所追求的世界，一个故事，一个角色，在我们的世界里改变现实，创造新的可能，我们参与，我们改变，我们创造...</b></span>
+                </div>
+                <div class="s5-img">
+                    <img src="./Geek_Game.png" class="img">
+                </div>
+            </div>
+            <div class="s6">
+                <div class="s6-txt1">
+                    <span class="txt1111"><b>安全</b></span>
+                </div>
+                <p></p>
+                <div class="s6-txt2">
+                    <span class="txt2222"><b>"路漫漫其修远兮，非大毅力者不能"</b></span>
+                </div>
+                <div class="s6-txt3">
+                    <span class="txt3333"><b>我们主要学习Web安全和二进制安全。在Web安全中我们将学习和实践Web漏洞挖掘技术，也将探索和讨论Web安全实践的方法。在二进制安全中我们专注于分析和防御与计算机程序、系统相关的威胁，同时实践漏洞分析和修补。耐心和钻研缺一不可。</b></span>
+                </div>
+                <div class="s6-img">
+                    <img src="./Geek_security.png" class="img">
+                </div>
+            </div>
+            <div class="s7" id="aboutus">
+                <div class="s7-img1">
+                    <img src="./decoration_Decoration(1).png" class="img">
+                </div>
+                <div class="s7-img2">
+                    <img src="./decoration_Decoration(2).png" class="img">
+                </div>
+                <div class="s7-img3">
+                    <img src="./decoration_Decoration(3).png" class="img">
+                </div>
+                <div class="s7-img4">
+                    <img src="./decoration_Decoration.png" class="img">
+                </div>
+                <div class="s7-txt1">
+                    <span class="s7txt1">About US</span>
+                </div>
+                <div class="s7-img5">
+                    <img src="./关于我们.png" class="img">
+                </div>
+                <div class="s7-1">
+                    <div class="s7-img6">
+                        <img src="./about_Speech.png" class="img">
+                    </div>
+                    <div class="s7-txt2">
+                        <span><b>每周我们会举行一次技术例会，用来汇报我们的学习内容，供成员之间交流学习。</b></span>
+                    </div>
+                </div>
+                <div class="s7-2">
+                    <div class="s7-img7">
+                        <img src="./about_Diversity.png" class="img">
+                    </div>
+                    <div class="s7-txt3">
+                        <span><b>多元化是我们的特色。在这里，你可以拥有多种方向选择，前后端、安全、AI、产品/设计、游戏等。</b></span>
+                    </div>
+                </div>
+                <div class="s7-3">
+                    <div class="s7-img8">
+                        <img src="./about_Time.png" class="img">
+                    </div>
+                    <div class="s7-txt4">
+                        <span><b>耐心、毅力是我们必备的品质，每周我们会至少花30小时在实验室中。以保证技术的精进。</b></span>
+                    </div>
+                </div>
+                <div class="s7-img9">
+                    <img src="./decoration_Butterfly.png" class="s7img9">
+                </div>
+            </div>
+            <div class="s8" id="contact">
+                <div class="s8-img1">
+                    <img src="./decoration_Tree.png" class="img">
+                </div>
+                <div class="s8-img2">
+                    <img src="./decoration_TreeWithSometing.png" class="img">
+                </div>
+                <div class="s8-img3">
+                    <img src="./decoration_Chameleon.png" class="img">
+                </div>
+                <div class="s8-img4">
+                    <img src="./decoration_Ladybug.png" class="img">
+                </div>
+                <div class="s8-txt1">
+                    <span class="s8txt1">Contact US</span>
+                </div>
+                <div class="s8-img5">
+                    <img src="./decoration_Leaves.png" class="img">
+                </div>
+                <div class="s8-img6">
+                    <img src="./电话.png" class="img">
+                </div>
+                <div class="s8-txt2">
+                    <ui>
+                        <li class="s8txt2">热爱计算机，具有geek精神，喜欢DIY，动手能力较强</li>
+                        <p></p>
+                        <li class="s8txt2">有编程/算法/硬件基础为佳(有作品可附上)</li>
+                        <p></p>
+                        <li class="s8txt2">有足够的空余时间，热爱思考，对事物有自己的见解</li>
+                        <p></p>
+                    </ui>
+                </div>
+                <div class="s8-txt3">
+                    <span class="s8txt3">ps:非新思路统招只有通过发送邮件自我介绍后，收到邮件回执后才会被允许进群,在读学生, 都可邮件到newthread_geek@outlook.com报名加入.(信中需备注个人基本信息以及意向方向,此招新活动为长期招新)</span>
+                </div>
+                <div class="s8-txt4">
+                    <span class="s8txt4">QQ-Group</span>
+                    <div class="s8-img7">
+                        <img src="./qq.png" class="img">
+                    </div>
+                </div>
+                <div class="s8-txt5" onclick="copyText()">
+                    <span class="s8txt5">E-mail</span>
+                    <div class="s8-img8">
+                        <img src="./email .png" class="img">
+                    </div>
+                </div>
+                <div class="s8-txt6">
+                    <a href="https://zgs.chsi.com.cn/home" target="blank">
+                        <span class="s8txt6">Github</span>
+                        <div class="s8-img9">
+                            <img src="./github.png" class="img">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="s9" id="QA">
+                <div class="s9-img1">
+                    <img src="./background_QA.png" class="img">
+                </div>
+                <div class="s9-txt1">
+                    <span class="s9txt1">More Questions</span>
+                </div>
+                <div class="s9-img2">
+                    <img src="./聊天.png" class="img">
+                </div>
+                <div class="QA">
+                    <div class="Q" onclick="toggleExpand1(this)">
+                        <div class="Q1">
+                            <span class="question1">1.什么是Geek(极客)？Geek精神又是什么？</span>
+                            <div class="answer1">
+                                <span class="answertxt1">拥有好奇之心，改变之力，爱钻研，能折腾。</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Q" onclick="toggleExpand2(this)">
+                        <div class="Q2">
+                            <span class="question2">2.招新是安排在什么时间？</span>
+                            <div class="answer2">
+                                <span class="answertxt2">按照惯例，正式招新时间是在9月下旬~10月上旬，不过今年会有一些改动，笔试地 点一般在9号教学楼。 如果想要了解我们，可以加入我们的QQ群，招新具体的安排/变动会在招新群通知。</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="Q" onclick="toggleExpand3(this)">
+                        <div class="Q3">
+                            <span class="question3">3.我们有考核吗？考核流程是怎样的呀？</span>
+                            <div class="answer3">
+                                <span class="answertxt3">嗯...我们一共有一轮笔试和两轮面试。权衡技术、经验和学习能力，第一轮是一些视野性的题目，淘汰率并不高。第二轮单独面试， 根据你的笔试提出技术相关的问题、兴趣爱好、个人看法。最后一轮群面，首先问及时间分 配上的问题，其次也会向你提出各种奇怪的问题。这一轮中许多题目其实并不难，也无标准答案，重在考察同学们在压力下的逻辑思维。全部通过成为预备成员啦。</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="Q" onclick="toggleExpand4(this)">
+                        <div class="Q4">
+                            <span class="question4">4.考核是怎样的形式？</span>
+                            <div class="answer4">
+                                <span class="answertxt4">在考核期间每人会拥有一位'长者'带你入门，学习技术与知识，交流经验与想法。完成每周的新人任务后再进行一次考核筛选 后就可以成为Geek组正式成员啦！在考核期必须满足每周30个小时在实验室哦,所以考核期也不可以懈怠哦！</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="Q" onclick="toggleExpand4(this)">
+                        <div class="Q5">
+                            <span class="question5">5.进入Geek组之后都有什么福利呢？</span>
+                            <div class="answer5">
+                                <span class="answertxt5">一对一的新人指引，每一个成员都有会一个mentor, 带你初入门槛，与你一同成长，组内管理较宽松,在尊重其他人的前提下可以尽情发挥自己的个性。 打破平淡，与同样疯狂的人把疯狂的idea实现，磨砺耐性、培养思维、成就梦想。Lab设备/网络资源充足，闲暇之余也有组织活动。更有许多的故事等你来听~</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="Q" onclick="toggleExpand4(this)">
+                        <div class="Q6">
+                            <span class="question6">6.进入团队会影响我的日常学习吗？</span>
+                            <div class="answer6">
+                                <span class="answertxt6">你要知道大学是一个可以自由安排自己学习生活的地方。如果你想在上课之余充实自己、激励自己，最好的方法就是和比自己更优秀的人在一起。团队不缺优秀的 人，而我们也期待同样优秀的你，让我们一起前进！小组里也有不少保研, 考研的前辈们, 大部分都能找到一个平衡点, 而且团队的经历对你日后读研, 工作都大有裨益。</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="Q" onclick="toggleExpand4(this)">
+                        <div class="Q7">
+                            <span class="question7">7.老师以及学长学姐们的期望是什么?</span>
+                            <div class="answer7">
+                                <span class="answertxt7">我们希望你有很强的自学能力，同时关注新事物、新技术，喜欢挑战，逻辑性强，善于和各种文化的人合作.“每个人都可以做自己想做的事情，每个人的方向不一样。 如果你想做产品或有不错的 idea，那么就可以找志同道合的人一起合作。”</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s10">
+                <span class="s10-txt">zrc</span>
+            </div>
+        </div>
+    </div>
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollPosition>50) { 
+            navbar.style.backgroundColor = 'rgba(255,165,0,0.8)';
+        } else {
+            navbar.style.backgroundColor = ' #efa30d';
+        }
+    });
+
+    function copyText(){
+        const text="newthread_geek@outlook.com";
+        navigator.clipboard.writeText(text).then(()=>{
+            alert('Geek的邮箱已经复制到剪贴板啦！');
+        }).catch(err=>{
+            console.error('复制失败：',err);
+        });
+    }
+
+    function toggleExpand1(element){
+            if (element.classList.contains('expanded')) {
+                element.classList.remove('expanded');
+                element.style.height='50px';
+            }
+            else {
+                element.classList.add('expanded');
+                element.style.height='70px';
+            }
+        }
+    function toggleExpand2(element){
+        if (element.classList.contains('expanded')) {
+            element.classList.remove('expanded');
+            element.style.height='50px';
+        }
+        else {
+            element.classList.add('expanded');
+            element.style.height='200px';
+        }
+    }
+    function toggleExpand3(element){
+        if (element.classList.contains('expanded')) {
+            element.classList.remove('expanded');
+            element.style.height='50px';
+        }
+        else {
+            element.classList.add('expanded');
+            element.style.height='250px';
+        }
+    }
+    function toggleExpand4(element){
+        if (element.classList.contains('expanded')) {
+            element.classList.remove('expanded');
+            element.style.height='50px';
+        }
+        else {
+            element.classList.add('expanded');
+            element.style.height='200px';
+        }
+    }
+    function toggleExpand5(element){
+        if (element.classList.contains('expanded')) {
+            element.classList.remove('expanded');
+            element.style.height='50px';
+        }
+        else {
+            element.classList.add('expanded');
+            element.style.height='300px';
+        }
+    }
+    function toggleExpand6(element){
+        if (element.classList.contains('expanded')) {
+            element.classList.remove('expanded');
+            element.style.height='50px';
+        }
+        else {
+            element.classList.add('expanded');
+            element.style.height='300px';
+        }
+    }
+    function toggleExpand7(element){
+        if (element.classList.contains('expanded')) {
+            element.classList.remove('expanded');
+            element.style.height='50px';
+        }
+        else {
+            element.classList.add('expanded');
+            element.style.height='300px';
+        }
+    }
+
+</script>               
+</body>
+</html>

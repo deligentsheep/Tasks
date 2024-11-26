@@ -22,3 +22,8 @@
 > 2.思考三者关系，探索更多Markdown原理：[Markdown深原理](Markdown3.md)
 ### 二、demo
 > 代码以及附件见文件夹：[DEMO](Gdemo)
+## 阶段四
+### 一、复刻网站链接
+> [链接](https://deligentsheep.github.io/)
+### 二、适配移动端
+> 见第四阶段文件夹中的移动端长图展示
